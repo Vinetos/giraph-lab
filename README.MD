@@ -1,4 +1,5 @@
 # Giraph-Lab
+This project is a simple lab to test Giraph graph computation. It is based on the [Giraph Quick Start](http://giraph.apache.org/quick_start.html) tutorial.
 ## Pre-requisites
 You must have docker running on your machine. If you don't have it, you can install it from [here](https://docs.docker.com/install/).
 
