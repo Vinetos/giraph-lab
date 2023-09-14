@@ -1,0 +1,8 @@
+services:
+  giraph:
+    build: .
+    tty: true
+    stdin_open: true
+    command: "/run.sh"
+    environment:
+      FILE: "example.DummyComputation"
