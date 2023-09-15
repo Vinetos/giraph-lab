@@ -19,7 +19,10 @@ do
 done
 
 echo "Running Giraph ($FILE)..."
-"$HADOOP_HOME"/bin/hadoop jar "$GIRAPH_HOME"/giraph-examples/target/giraph-examples-1.1.0-SNAPSHOT-for-hadoop-2.4.1-jar-with-dependencies.jar org.apache.giraph.GiraphRunner "$FILE" --yarnjars giraph-examples-1.1.0-SNAPSHOT-for-hadoop-2.4.1-jar-with-dependencies.jar --workers 1 --vertexInputFormat org.apache.giraph.io.formats.JsonLongDoubleFloatDoubleVertexInputFormat --vertexInputPath /user/root/input/tiny-graph.txt -vertexOutputFormat org.apache.giraph.io.formats.IdWithValueTextOutputFormat --outputPath /user/root/output
+"$HADOOP_HOME"/bin/hadoop jar "$GIRAPH_HOME"/giraph-examples/target/giraph-examples-1.1.0-SNAPSHOT-for-hadoop-2.4.1-jar-with-dependencies.jar org.apache.giraph.GiraphRunner "$FILE" --yarnjars giraph-examples-1.1.0-SNAPSHOT-for-hadoop-2.4.1-jar-with-dependencies.jar --workers 1 --vertexInputFormat org.apache.giraph.io.formats.JsonLongDoubleFloatDoubleVertexInputFormat --vertexInputPath /user/root/input/tiny-graph.txt -vertexOutputFormat org.apache.giraph.io.formats.IdWithValueTextOutputFormat --outputPath /user/root/output -ca giraph.logLevel=debug
 
 echo "======================================"
-"$HADOOP_HOME"/bin/hdfs dfs -cat /user/root/output/part-m-00001
+"$HADOOP_HOME"/bin/hdfs dfs -cat /user/root/output/part-m-0000*
+
+echo "Starting bash..."
+bash

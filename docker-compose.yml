@@ -5,4 +5,4 @@ services:
     stdin_open: true
     command: "/run.sh"
     environment:
-      FILE: "example.DummyComputation"
+      FILE: "example.HSAlgorithm"
